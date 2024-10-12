@@ -6,7 +6,6 @@ import Body from './Body'
 function Home() {
   return (
     <div>
-       {/* <Header /> */}
        <Marquee />
        <Body/>
     </div>

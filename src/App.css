@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -660,6 +664,11 @@ button:disabled {
 
   .card{
     height: 600px;
+  }
+
+  .dropdown-recommended{
+    width: 300px;
+    translate: -58%;
   }
 
   .card:nth-child(9n+1){

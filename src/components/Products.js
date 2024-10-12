@@ -1,23 +1,19 @@
-import SingleProduct from './SingleProduct'
-import React, { useState,useEffect} from 'react'
+import React from 'react';
+import SingleProduct from './SingleProduct';
 
-export default function Products({data}) {   
-  // console.log(data)
-  const items = ['a','a','a','a','a','a','a','a','a','a','a','a','a','a','a','a','a','a','a','a','a','a','a','a','a']
-  
+export default function Products({ data }) {
   return (
-    <div className='products'>  
-    {
-      data.map((item) =>{
-        
-        return(
-          // <>
-          // 
-          <SingleProduct colorChoices={item.colorChoices} id={item.id} name={item.name} image={item.imageUrl} price={item.price}  />
-          // </>
-        )
-      })
-    }      
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+      {data.map((item) => (
+        <SingleProduct
+          key={item.id} // Ensure each product has a unique key
+          colorChoices={item.colorChoices}
+          id={item.id}
+          name={item.name}
+          image={item.imageUrl}
+          price={item.price}
+        />
+      ))}
     </div>
-  )
+  );
 }

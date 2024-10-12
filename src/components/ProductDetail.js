@@ -13,6 +13,7 @@ export default function ProductDetail({id}) {
   const { productId } = useParams();
   const [size, setSize] = useState('');
   const [selectedColor, setSelectedColor] = useState('');
+  // const [] 
 
   const product = products.items.find((item) => item.id === productId);
   const handleAddtoBag = ()=>{
@@ -42,6 +43,7 @@ export default function ProductDetail({id}) {
 
   const selectColor = (payload)=>{
     setSelectedColor(payload); 
+    
   }
 
  
